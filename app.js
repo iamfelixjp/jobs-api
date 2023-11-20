@@ -36,6 +36,10 @@ app.use(xss());
 
 const authenticationMiddleware = require('./middleware/authentication');
 
+app.get('/', (req, res) => {
+  res.send('Jobs api');
+});
+
 // use routes
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/jobs', authenticationMiddleware, jobsRouter);
