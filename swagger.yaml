@@ -78,8 +78,8 @@ paths:
               allOf:
                 - $ref: '#/components/schemas/CreateJobRequest'
                 - example:
-                    company: GSK rrrhh2
-                    position: New 3333 Sales Manager
+                    company: Google
+                    position: Back-end Developer
             example:
               company: Google
               position: Back-end Developer
