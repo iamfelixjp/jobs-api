@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Jobs API
+  title: Jobs API {Built with Node.js and Express.js}
   contact: {}
   version: '1.0'
 servers:
@@ -22,12 +22,12 @@ paths:
               allOf:
                 - $ref: '#/components/schemas/RegisterUserRequest'
                 - example:
-                    name: favian
-                    email: favian@gmail.com
+                    name: felix
+                    email: felix@gmail.com
                     password: secret
             example:
-              name: favian
-              email: favian@gmail.com
+              name: felix
+              email: felix@gmail.com
               password: secret
         required: true
       responses:
@@ -51,10 +51,10 @@ paths:
               allOf:
                 - $ref: '#/components/schemas/LoginUserRequest'
                 - example:
-                    email: favian@gmail.com
+                    email: felix@gmail.com
                     password: secret
             example:
-              email: favian@gmail.com
+              email: felix@gmail.com
               password: secret
         required: true
       responses:
@@ -81,8 +81,8 @@ paths:
                     company: GSK rrrhh2
                     position: New 3333 Sales Manager
             example:
-              company: GSK rrrhh2
-              position: New 3333 Sales Manager
+              company: Google
+              position: Back-end Developer
         required: true
       responses:
         '200':
@@ -139,11 +139,11 @@ paths:
               allOf:
                 - $ref: '#/components/schemas/UpdateJobRequest'
                 - example:
-                    company: roudom
-                    position: roundom
+                    company: New Company
+                    position: New Position
             example:
-              company: roudom
-              position: roundom
+              company: New Company
+              position: New Company
         required: true
       responses:
         '200':
@@ -182,8 +182,8 @@ components:
         password:
           type: string
       example:
-        name: favian
-        email: favian@gmail.com
+        name: felix
+        email: felix@gmail.com
         password: secret
     LoginUserRequest:
       title: LoginUserRequest
@@ -197,7 +197,7 @@ components:
         password:
           type: string
       example:
-        email: favian@gmail.com
+        email: felix@gmail.com
         password: secret
     CreateJobRequest:
       title: CreateJobRequest
@@ -211,8 +211,8 @@ components:
         position:
           type: string
       example:
-        company: GSK rrrhh2
-        position: New 3333 Sales Manager
+        company: Google
+        position: Back-end Developer
     UpdateJobRequest:
       title: UpdateJobRequest
       required:
@@ -225,8 +225,8 @@ components:
         position:
           type: string
       example:
-        company: roudom
-        position: roundom
+        company: New Company
+        position: New Company
   securitySchemes:
     bearer:
       type: http
